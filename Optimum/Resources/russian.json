@@ -1,0 +1,50 @@
+{
+  "language": "Русский",
+  "menu": {
+    "binaryFile": "Бинарный файл",
+    "exit": "Выход",
+    "fileCorrupted": "Файл поврежден или имеет неправильный формат:",
+    "loadGame": "Загрузить игру",
+    "newGame": "Новая игра",
+    "saveGame": "Сохранить игру",
+    "settings": "Настройки"
+  },
+  "messages": {
+    "anotherCheckerNeedsBeating": "Другая шашка может бить. По установленным правилам бить обязательно.",
+    "checkerNeedsBeating": "По установленным правилам бить обязательно.",
+    "continuousMessage": "Предусматривается продолжение хода",
+    "continuousTurn": "Продолжение хода",
+    "debug": "Отладка",
+    "debugCategory": "Категория = ",
+    "enemyChecker": "Выбранная шашка принадлежит противнику",
+    "impossibleToMove": "Невозможно совершить ход",
+    "impossibleTurn": "Ход невозможен исходя из логики игры.",
+    "incorrectDirection": "Шашка не может двигаться в заданном направлении.",
+    "rulesMismatch": "Ход не сооветствует заданным правилам игры. (См. настройки)",
+    "tooMuchRangeReason": "Превышена максимальная дальность хода для шашки.",
+    "turnContinuationExpected": "Ходившая шашка должна продолжить ход.",
+    "turnHeader": "Ход игрока",
+    "turnRed": "Ход красных.",
+    "turnWhite": "Ход белых.",
+    "victoryHeader": "Победа",
+    "victoryRed": "Победа красных.",
+    "victoryWhite": "Победа белых."
+  },
+  "settings": {
+    "beatAtWill": "Бить обязательно",
+    "beatingIsNecessary": "Бить по желанию",
+    "beatingRules": "Правила взятия шашек",
+    "board": "Доска",
+    "englishCheckers": "Английские шашки",
+    "englishCheckersRules": "  - простые шашки бьют только\u000a    вперед\u000a  - дамка ходит в любую сторону\u000a    на дистанцию 1 клетки",
+    "firstTurn": "Первыми ходят",
+    "giveaway": "Поддавки",
+    "language": "Язык",
+    "red": "Красные",
+    "rules": "Правила игры",
+    "russianDraughts": "Русские шашки",
+    "russianDraughtsRules": "  - простые шашки могут бить назад\u000a  - дамка может ходить на любую\u000a     дистанцию",
+    "title": "Настройки приложения",
+    "white": "Белые"
+  }
+}

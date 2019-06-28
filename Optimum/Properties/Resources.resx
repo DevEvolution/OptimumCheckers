@@ -127,11 +127,20 @@
   <data name="board3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\board3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="en_uk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\en-uk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="redking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="redrose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redrose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="russian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\russian.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ru_ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ru-ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="start_position" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start_position.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

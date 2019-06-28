@@ -33,7 +33,8 @@
             this.close = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rules_group = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.give_away = new System.Windows.Forms.CheckBox();
+            this.english_rules_lbl = new System.Windows.Forms.Label();
             this.russian_rules_lbl = new System.Windows.Forms.Label();
             this.english_checkers = new System.Windows.Forms.RadioButton();
             this.russian_checkers = new System.Windows.Forms.RadioButton();
@@ -42,24 +43,27 @@
             this.white_first_pix = new System.Windows.Forms.PictureBox();
             this.red_first = new System.Windows.Forms.RadioButton();
             this.white_first = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.board_group = new System.Windows.Forms.GroupBox();
             this.board_var2_chk = new System.Windows.Forms.RadioButton();
             this.board_var3_chk = new System.Windows.Forms.RadioButton();
             this.board_var2_pix = new System.Windows.Forms.PictureBox();
             this.board_var3_pix = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.beating_rules = new System.Windows.Forms.GroupBox();
             this.soft_beating = new System.Windows.Forms.RadioButton();
             this.force_beating = new System.Windows.Forms.RadioButton();
-            this.give_away = new System.Windows.Forms.CheckBox();
+            this.language_group = new System.Windows.Forms.GroupBox();
+            this.lang_russian = new System.Windows.Forms.RadioButton();
+            this.lang_english = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.rules_group.SuspendLayout();
             this.move_first.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.red_first_pix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.white_first_pix)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.board_group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.board_var2_pix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.board_var3_pix)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.beating_rules.SuspendLayout();
+            this.language_group.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -96,7 +100,7 @@
             // rules_group
             // 
             this.rules_group.Controls.Add(this.give_away);
-            this.rules_group.Controls.Add(this.label1);
+            this.rules_group.Controls.Add(this.english_rules_lbl);
             this.rules_group.Controls.Add(this.russian_rules_lbl);
             this.rules_group.Controls.Add(this.english_checkers);
             this.rules_group.Controls.Add(this.russian_checkers);
@@ -109,16 +113,26 @@
             this.rules_group.TabStop = false;
             this.rules_group.Text = "Правила игры";
             // 
-            // label1
+            // give_away
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(19, 126);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 64);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "  - простые шашки бьют только\r\n    вперед\r\n  - дамка ходит в любую сторону\r\n    н" +
+            this.give_away.AutoSize = true;
+            this.give_away.Location = new System.Drawing.Point(22, 194);
+            this.give_away.Name = "give_away";
+            this.give_away.Size = new System.Drawing.Size(107, 22);
+            this.give_away.TabIndex = 6;
+            this.give_away.Text = "Поддавки";
+            this.give_away.UseVisualStyleBackColor = true;
+            // 
+            // english_rules_lbl
+            // 
+            this.english_rules_lbl.AutoSize = true;
+            this.english_rules_lbl.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.english_rules_lbl.Location = new System.Drawing.Point(19, 126);
+            this.english_rules_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.english_rules_lbl.Name = "english_rules_lbl";
+            this.english_rules_lbl.Size = new System.Drawing.Size(256, 64);
+            this.english_rules_lbl.TabIndex = 5;
+            this.english_rules_lbl.Text = "  - простые шашки бьют только\r\n    вперед\r\n  - дамка ходит в любую сторону\r\n    н" +
     "а дистанцию 1 клетки";
             // 
             // russian_rules_lbl
@@ -216,18 +230,18 @@
             this.white_first.Text = "Белые";
             this.white_first.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // board_group
             // 
-            this.groupBox1.Controls.Add(this.board_var2_chk);
-            this.groupBox1.Controls.Add(this.board_var3_chk);
-            this.groupBox1.Controls.Add(this.board_var2_pix);
-            this.groupBox1.Controls.Add(this.board_var3_pix);
-            this.groupBox1.Location = new System.Drawing.Point(354, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(401, 242);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Доска";
+            this.board_group.Controls.Add(this.board_var2_chk);
+            this.board_group.Controls.Add(this.board_var3_chk);
+            this.board_group.Controls.Add(this.board_var2_pix);
+            this.board_group.Controls.Add(this.board_var3_pix);
+            this.board_group.Location = new System.Drawing.Point(354, 45);
+            this.board_group.Name = "board_group";
+            this.board_group.Size = new System.Drawing.Size(401, 242);
+            this.board_group.TabIndex = 3;
+            this.board_group.TabStop = false;
+            this.board_group.Text = "Доска";
             // 
             // board_var2_chk
             // 
@@ -273,16 +287,16 @@
             this.board_var3_pix.TabStop = false;
             this.board_var3_pix.Click += new System.EventHandler(this.board_var3_pix_Click);
             // 
-            // groupBox2
+            // beating_rules
             // 
-            this.groupBox2.Controls.Add(this.soft_beating);
-            this.groupBox2.Controls.Add(this.force_beating);
-            this.groupBox2.Location = new System.Drawing.Point(354, 297);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(401, 94);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Правила взятия шашек";
+            this.beating_rules.Controls.Add(this.soft_beating);
+            this.beating_rules.Controls.Add(this.force_beating);
+            this.beating_rules.Location = new System.Drawing.Point(354, 297);
+            this.beating_rules.Name = "beating_rules";
+            this.beating_rules.Size = new System.Drawing.Size(401, 94);
+            this.beating_rules.TabIndex = 4;
+            this.beating_rules.TabStop = false;
+            this.beating_rules.Text = "Правила взятия шашек";
             // 
             // soft_beating
             // 
@@ -306,15 +320,46 @@
             this.force_beating.Text = "Бить обязательно";
             this.force_beating.UseVisualStyleBackColor = true;
             // 
-            // give_away
+            // language_group
             // 
-            this.give_away.AutoSize = true;
-            this.give_away.Location = new System.Drawing.Point(22, 194);
-            this.give_away.Name = "give_away";
-            this.give_away.Size = new System.Drawing.Size(107, 22);
-            this.give_away.TabIndex = 6;
-            this.give_away.Text = "Поддавки";
-            this.give_away.UseVisualStyleBackColor = true;
+            this.language_group.Controls.Add(this.lang_russian);
+            this.language_group.Controls.Add(this.lang_english);
+            this.language_group.Location = new System.Drawing.Point(354, 391);
+            this.language_group.Name = "language_group";
+            this.language_group.Size = new System.Drawing.Size(401, 48);
+            this.language_group.TabIndex = 5;
+            this.language_group.TabStop = false;
+            this.language_group.Text = "Язык";
+            // 
+            // lang_russian
+            // 
+            this.lang_russian.AutoSize = true;
+            this.lang_russian.Image = global::Optimum.Properties.Resources.ru_ru;
+            this.lang_russian.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lang_russian.Location = new System.Drawing.Point(250, 18);
+            this.lang_russian.Name = "lang_russian";
+            this.lang_russian.Size = new System.Drawing.Size(120, 24);
+            this.lang_russian.TabIndex = 1;
+            this.lang_russian.TabStop = true;
+            this.lang_russian.Text = "Русский";
+            this.lang_russian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.lang_russian.UseVisualStyleBackColor = true;
+            this.lang_russian.CheckedChanged += new System.EventHandler(this.Lang_russian_CheckedChanged);
+            // 
+            // lang_english
+            // 
+            this.lang_english.AutoSize = true;
+            this.lang_english.Image = global::Optimum.Properties.Resources.en_uk;
+            this.lang_english.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lang_english.Location = new System.Drawing.Point(16, 18);
+            this.lang_english.Name = "lang_english";
+            this.lang_english.Size = new System.Drawing.Size(120, 24);
+            this.lang_english.TabIndex = 0;
+            this.lang_english.TabStop = true;
+            this.lang_english.Text = "English";
+            this.lang_english.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.lang_english.UseVisualStyleBackColor = true;
+            this.lang_english.CheckedChanged += new System.EventHandler(this.Lang_english_CheckedChanged);
             // 
             // OptimumSettings
             // 
@@ -322,8 +367,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(796, 447);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.language_group);
+            this.Controls.Add(this.beating_rules);
+            this.Controls.Add(this.board_group);
             this.Controls.Add(this.move_first);
             this.Controls.Add(this.rules_group);
             this.Controls.Add(this.menuStrip1);
@@ -343,12 +389,14 @@
             this.move_first.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.red_first_pix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.white_first_pix)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.board_group.ResumeLayout(false);
+            this.board_group.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.board_var2_pix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.board_var3_pix)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.beating_rules.ResumeLayout(false);
+            this.beating_rules.PerformLayout();
+            this.language_group.ResumeLayout(false);
+            this.language_group.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,23 +408,26 @@
         private System.Windows.Forms.ToolStripMenuItem close;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.GroupBox rules_group;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label english_rules_lbl;
         private System.Windows.Forms.Label russian_rules_lbl;
         private System.Windows.Forms.RadioButton english_checkers;
         private System.Windows.Forms.RadioButton russian_checkers;
         private System.Windows.Forms.GroupBox move_first;
         private System.Windows.Forms.RadioButton red_first;
         private System.Windows.Forms.RadioButton white_first;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox board_group;
         private System.Windows.Forms.RadioButton board_var2_chk;
         private System.Windows.Forms.PictureBox board_var2_pix;
         private System.Windows.Forms.RadioButton board_var3_chk;
         private System.Windows.Forms.PictureBox board_var3_pix;
         private System.Windows.Forms.PictureBox red_first_pix;
         private System.Windows.Forms.PictureBox white_first_pix;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox beating_rules;
         private System.Windows.Forms.RadioButton soft_beating;
         private System.Windows.Forms.RadioButton force_beating;
         private System.Windows.Forms.CheckBox give_away;
+        private System.Windows.Forms.GroupBox language_group;
+        private System.Windows.Forms.RadioButton lang_english;
+        private System.Windows.Forms.RadioButton lang_russian;
     }
 }

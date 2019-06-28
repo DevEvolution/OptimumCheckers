@@ -53,6 +53,8 @@
     <Compile Include="Belonging.cs" />
     <Compile Include="Evaluator.cs" />
     <Compile Include="Checker.cs" />
+    <Compile Include="ILocalizable.cs" />
+    <Compile Include="LocalizedText.cs" />
     <Compile Include="MouseClickHandler.cs" />
     <Compile Include="Optimum.cs">
       <SubType>Form</SubType>
@@ -102,7 +104,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bird.ico" />
+    <None Include="Resources\ru-ru.png" />
+    <None Include="Resources\en-uk.png" />
     <None Include="Resources\board2.png" />
+    <None Include="Resources\russian.json" />
     <None Include="Resources\start_position.bin" />
     <None Include="Resources\whiterose2.png" />
     <None Include="Resources\whiterose.png" />

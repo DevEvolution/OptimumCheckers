@@ -685,7 +685,7 @@ namespace Optimum
             if (reason == Reason.OK) return;
 
             ToolTip tip = new ToolTip();
-            tip.ToolTipTitle = "Невозможно совершить ход";
+            tip.ToolTipTitle = Program.LocalizedText.messages.impossibleToMove;
             tip.ToolTipIcon = ToolTipIcon.Warning;
             tip.UseAnimation = true;
             tip.UseFading = true;
@@ -695,28 +695,28 @@ namespace Optimum
             switch (reason)
             {
                 case Reason.TooMuchRange:
-                    msg = "Превышена максимальная дальность хода для шашки.";
+                    msg = Program.LocalizedText.messages.tooMuchRangeReason;
                     break;
                 case Reason.ImpossibleTurn:
-                    msg = "Ход невозможен исходя из логики игры.";
+                    msg = Program.LocalizedText.messages.impossibleTurn;
                     break;
                 case Reason.RulesMismatch:
-                    msg = "Ход не сооветствует заданным правилам игры. (См. настройки)";
+                    msg = Program.LocalizedText.messages.rulesMismatch;
                     break;
                 case Reason.IncorrectDirection:
-                    msg = "Шашка не может двигаться в заданном направлении.";
+                    msg = Program.LocalizedText.messages.incorrectDirection;
                     break;
                 case Reason.CheckerNeedsBeating:
-                    msg = "По установленным правилам бить обязательно.";
+                    msg = Program.LocalizedText.messages.checkerNeedsBeating;
                     break;
                 case Reason.AnotherCheckerNeedsBeating:
-                    msg = "Другая шашка может бить. По установленным правилам бить обязательно.";
+                    msg = Program.LocalizedText.messages.anotherCheckerNeedsBeating;
                     break;
                 case Reason.TurnContinuationExpected:
-                    msg = "Ходившая шашка должна продолжить ход.";
+                    msg = Program.LocalizedText.messages.turnContinuationExpected;
                     break;
                 case Reason.EnemyChecker:
-                    msg = "Выбранная шашка принадлежит противнику";
+                    msg = Program.LocalizedText.messages.enemyChecker;
                     break;
             }
             tip.Show(msg, _screen, new Point(20, 10), 1000);
@@ -729,12 +729,12 @@ namespace Optimum
         public void ShowContiniousTurnMessage()
         {
             ToolTip tip = new ToolTip();
-            tip.ToolTipTitle = "Продолжение хода";
+            tip.ToolTipTitle = Program.LocalizedText.messages.continuousTurn;
             tip.ToolTipIcon = ToolTipIcon.Info;
             tip.UseAnimation = true;
             tip.UseFading = true;
 
-            tip.Show("Предусматривается продолжение хода", _screen, new Point(20, 10), 1000);
+            tip.Show(Program.LocalizedText.messages.continuousMessage, _screen, new Point(20, 10), 1000);
         }
 
 
@@ -744,16 +744,16 @@ namespace Optimum
         public void ShowTurnOwnerMessage()
         {
             ToolTip tip = new ToolTip();
-            tip.ToolTipTitle = "Ход игрока";
+            tip.ToolTipTitle = Program.LocalizedText.messages.turnHeader;
             tip.ToolTipIcon = ToolTipIcon.Info;
             tip.UseAnimation = true;
             tip.UseFading = true;
             String msg;
             if (_state.turn == Belonging.RedRose)
-                msg = "красных.";
+                msg = Program.LocalizedText.messages.turnRed;
             else
-                msg = "белых.";
-            tip.Show("Ход " + msg, _screen, new Point(20, 10), 1000);
+                msg = Program.LocalizedText.messages.turnWhite;
+            tip.Show(msg, _screen, new Point(20, 10), 1000);
         }
 
 
@@ -763,7 +763,7 @@ namespace Optimum
         public void ShowVictoryMessage(bool inverse = false)
         {
             ToolTip tip = new ToolTip();
-            tip.ToolTipTitle = "Победа";
+            tip.ToolTipTitle = Program.LocalizedText.messages.victoryHeader;
             tip.ToolTipIcon = ToolTipIcon.Error;
             tip.UseAnimation = true;
             tip.UseFading = true;
@@ -783,10 +783,10 @@ namespace Optimum
             }
             
             if (belonging == Belonging.RedRose)
-                msg = "белых.";
+                msg = Program.LocalizedText.messages.victoryWhite;
             else
-                msg = "красных.";
-            tip.Show("Победа " + msg, _screen, new Point(20, 10), 5000);
+                msg = Program.LocalizedText.messages.victoryRed;
+            tip.Show(msg, _screen, new Point(20, 10), 5000);
         }
 
 
@@ -796,12 +796,12 @@ namespace Optimum
         public void ShowDebugMessage(int category)
         {
             ToolTip tip = new ToolTip();
-            tip.ToolTipTitle = "Дебаг";
+            tip.ToolTipTitle = Program.LocalizedText.messages.debug;
             tip.ToolTipIcon = ToolTipIcon.Info;
             tip.UseAnimation = true;
             tip.UseFading = true;
 
-            tip.Show($"Категория = {category}", _screen, new Point(20, 40), 2000);
+            tip.Show(Program.LocalizedText.messages.debugCategory + category.ToString(), _screen, new Point(20, 40), 2000);
         }
     }
 }

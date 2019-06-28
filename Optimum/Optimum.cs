@@ -14,7 +14,7 @@ using System.Xml.Serialization;
 
 namespace Optimum
 {
-    public partial class Optimum : Form
+    public partial class Optimum : Form, ILocalizable
     {
         // Game state
         public State _state;
@@ -29,6 +29,8 @@ namespace Optimum
         public Optimum()
         {
             InitializeComponent();
+            Program.LocalizationChanged += LoadLocalizedText;
+            LoadLocalizedText();
         }
 
 
@@ -137,7 +139,7 @@ namespace Optimum
         private void сохранитьИгруToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Бинарный файл|*.bin";
+            sfd.Filter = Program.LocalizedText.menu.binaryFile + "|*.bin";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 State_Serialize(sfd.FileName);
@@ -204,7 +206,7 @@ namespace Optimum
         private void загрузитьИгруToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Бинарный файл|*.bin";
+            ofd.Filter = Program.LocalizedText.menu.binaryFile + "|*.bin";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -215,7 +217,7 @@ namespace Optimum
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Файл поврежден или имеет неправильный формат:" + ex.Message);
+                    MessageBox.Show(Program.LocalizedText.menu.fileCorrupted + ex.Message);
                 }
             }
             _mouseHandler.ShowTurnOwnerMessage();
@@ -308,6 +310,18 @@ namespace Optimum
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        /// <summary>
+        /// Load localized text
+        /// </summary>
+        public void LoadLocalizedText()
+        {
+            новаяИграMenuItem.Text = Program.LocalizedText.menu.newGame;
+            загрузитьИгруToolStripMenuItem.Text = Program.LocalizedText.menu.loadGame;
+            сохранитьИгруToolStripMenuItem.Text = Program.LocalizedText.menu.saveGame;
+            настройкиToolStripMenuItem.Text = Program.LocalizedText.menu.settings;
+            выходToolStripMenuItem.Text = Program.LocalizedText.menu.exit;
         }
     }
 }
